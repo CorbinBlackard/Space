@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <form action="/add" method="POST">
+        {% csrf_token %}
+        <p>Planet name: <input type="text" name="name"></p>
+        <p>Description: <input type="text" name="desc"></p>
+        <p>Longest Distance from Earth: <input type="text" name="longest_dist"></p>
+        <p>Shortest Distance from Earth: <input type="text" name="shortest_dist"></p>
+        <p>Planet Icon: <input type="text" name="image"></p>
+        <input type="submit" value="Add Planet">
+    </form>
+
+    
+</body>
+</html>

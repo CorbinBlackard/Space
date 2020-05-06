@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planet Info</title>
+    <link rel="stylesheet" type="text/css" href="../static/styles/planet_info.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $('.scroll').hide()
+            $('.item_list').hover(function(){
+                $('.scroll').show()
+            });
+        });
+    </script>
+    <!-- <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet"> -->
+
+</head>
+<body>
+    <div class="box">
+        <nav class="navbar navbar-dark bg-dark">
+            <a class="navbar-brand" href="/">Home</a>
+            <!-- <a class="navbar-brand" href="/create">Add Planet</a> -->
+            <!-- <a href="/update/{{planet_to_show.id}}">Update</a> -->
+        </nav>
+        <div class="info">
+            <h1>{{planet_to_show.name}}</h1>
+            <img src="{{planet_to_show.image}}" class="planet_pic">
+            <li><p>{{planet_to_show.name}} distance from Earth: {{request.session.planet_length}} miles.</p>
+        </div>
+        <h3 class="dist_info">{{request.session.sentence}}</h3>
+        
+        <div class="item_box">
+            <div class="item_list">
+                {% for item in items %}
+                    <div class="holder">
+                        <div class="header">
+                            <img src="{{item.item_image}}" class="card-img-top" style="width: 150px; height: 150px;">
+                        </div>
+                        <div class="footer" style="width: 114%;">
+                            <h5 class="card-title">{{item.item_name}}</h5>
+                            <h8>Length: {{item.length }} ft</h8>
+                            <div class="card-footer">
+                                <a href="/measure/{{item.id}}/{{planet_to_show.id}}" class="btn btn-primary">Use</a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+                </div>
+        </div>
+        <div class="scroll">
+            <h4>Scroll --></h4>
+        </div>
+    </div>
+</body>
+</html>

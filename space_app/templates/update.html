@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/updatePlanet/{{planet.id}}" method="POST">
+        {% csrf_token %}
+        <p>Planet name: <input type="text" name="name" value="{{planet.name}}"></p>
+        <p>Description: <input type="text" name="desc" value="{{planet.desc}}"></p>
+        <p>Longest Distance from Earth: <input type="text" name="longest_dist" value="{{planet.longest_dist}}"></p>
+        <p>Shortest Distance from Earth: <input type="text" name="shortest_dist" value="{{planet.shortest_dist}}"></p>
+        <p>Planet Icon: <input type="text" name="image" value="{{planet.image}}"></p>
+        <input type="submit" value="Update Planet">
+    </form>
+</body>
+</html>

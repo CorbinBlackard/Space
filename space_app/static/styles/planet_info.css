@@ -1,0 +1,117 @@
+
+.box{
+    width: 100%;
+    height: 1000px;
+    background-size: 100% 100%;
+    background-image: url(https://wallpapercave.com/wp/wp3284832.gif);
+    display: inline-block;
+    text-align: center;
+    font-family: 'Orbitron';
+}
+.info{
+    width: 40%;
+    /* border: 3px solid white; */
+    border-radius: 30px;
+    margin-top: 50px;
+    margin-left: 30%;
+}
+h1,p{
+    text-align: center;
+    color: white;
+}
+.item_box{
+    width: 75%;
+    height: 300px;
+    text-align: center;
+    margin-top: 70px;
+    margin-left: 12%;
+    text-align: center;
+    /* border: 2px solid violet; */
+
+}
+.item_list{
+    width: 600px;
+    height: 320px;
+    display: inline-flex;
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+.planet_pic{
+    width: 250px;
+    height: 250px;
+    transform: translatey(0px);
+	animation: float 4s ease-in-out infinite;
+}
+.card{
+    display: inline-flex;
+    width: 300px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.holder{
+    width: 25%;
+    height: 85%;
+    /* border: 2px solid violet; */
+    margin-left: 38px;
+}
+.header{
+    height: 50%;
+    width: 90%;
+    /* border: 2px solid green; */
+}
+.footer{
+    margin-bottom: .75rem;
+    margin-top: 50px;
+    color: white;
+}
+.btn-primary{
+    margin-top: 20px;
+}
+.dist_info{
+    color: white;
+}
+.scroll{
+    margin-top: 50px;
+    color: white;
+    width: 125px;
+    height: 35px;
+    border: 3px solid white;
+    background-color: black;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+@-webkit-keyframes float {
+    0% {
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0);
+        -webkit-transform: translatey(0px);
+                transform: translatey(0px);
+    }
+    50% {
+        box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0);
+        -webkit-transform: translatey(-20px);
+                transform: translatey(-20px);
+    }
+    100% {
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0);
+        -webkit-transform: translatey(0px);
+                transform: translatey(0px);
+    }
+}
+@keyframes float {
+    0% {
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0);
+        -webkit-transform: translatey(0px);
+                transform: translatey(0px);
+    }
+    50% {
+        box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0);
+        -webkit-transform: translatey(-20px);
+                transform: translatey(-20px);
+    }
+    100% {
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0);
+        -webkit-transform: translatey(0px);
+                transform: translatey(0px);
+    }
+}

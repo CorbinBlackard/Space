@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box{
+width: 100%;
+height: 1000px;
+border: 6px solid black;
+background-color: black;
+background-image: url(https://wallpapercave.com/wp/wp3284832.gif); 
+background-size: 100% 100%;
+padding-bottom: 100px;
+}
+.card{
+    /* margin-top: 30%; */
+    display: inline-table;
+    margin: 23px;
+    border-radius: 10px;
+}
+img{
+    margin-top: 10px;
+    margin-left: 5px;
+}
+.welcome{
+    width: 50%;
+    height: 200px;
+    margin-left: 300px;
+    margin-top: 350px;
+    text-align: center;
+    color: white;
+    text-shadow: 8px 8px 5px black;
+    font-family: 'Orbitron';
+}
+.planet_info{
+    width: 75%;
+    height: 395px;
+    margin-left: 15%;
+    border-radius: 70px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.card{
+    display: inline-block;
+}
+.out_info{
+    width: 20%;
+    height: 175px;
+    display: inline-block;
+    text-align: center;
+    margin-top: 25px;
+    margin-left: 20px;
+    
+}
+.in_info{
+    width: 95%;
+    height: 25%;
+    display: inline-block;
+    color: grey;
+}
+.btn-a{
+    margin-left: 195px;
+}
+.planet_icon{
+    width: 175px;
+    height: 175px;
+    animation: float 4s ease-in-out infinite;
+}
+.planet_name{
+    margin-top: -100px;
+    color: white;
+    text-shadow: 2px 3px 1px black;
+    font-weight: bold;
+    
+}
+@keyframes float {
+    0% {
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0);
+        -webkit-transform: translatey(0px);
+                transform: translatey(0px);
+    }
+    50% {
+        box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0);
+        -webkit-transform: translatey(-20px);
+                transform: translatey(-20px);
+    }
+    100% {
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0);
+        -webkit-transform: translatey(0px);
+                transform: translatey(0px);
+    }
+}
+
+/* @keyframes myOrbit {
+    from { transform: rotate(0deg) translateX(350px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(350px) rotate(-360deg); }
+} 
+
+.practice {
+    width: 175px;
+    height: 175px;
+    position: absolute;
+    left: 38%;
+    top: 330px;
+    animation: myOrbit 4s linear infinite;
+} 
+.practice2 {
+    width: 175px;
+    height: 175px;
+    position: absolute;
+    left: 38%;
+    top: 330px;
+    animation: myOrbit 4s linear infinite;
+    animation-delay: .5s;
+}
+.practice3 {
+    width: 175px;
+    height: 175px;
+    position: absolute;
+    left: 38%;
+    top: 330px;
+    animation: myOrbit 4s linear infinite;
+    animation-delay: 1s;
+}
+.practice4 {
+    width: 175px;
+    height: 175px;
+    position: absolute;
+    left: 38%;
+    top: 330px;
+    animation: myOrbit 4s linear infinite;
+    animation-delay: 1.5s;
+}
+.practice5 {
+    width: 175px;
+    height: 175px;
+    position: absolute;
+    left: 38%;
+    top: 330px;
+    animation: myOrbit 4s linear infinite;
+    animation-delay: 2s;
+}
+.practice6 {
+    width: 175px;
+    height: 175px;
+    position: absolute;
+    left: 38%;
+    top: 330px;
+    animation: myOrbit 4s linear infinite;
+    animation-delay: 2.5s;
+}
+.practice7 {
+    width: 175px;
+    height: 175px;
+    position: absolute;
+    left: 38%;
+    top: 330px;
+    animation: myOrbit 4s linear infinite;
+    animation-delay: 3s;
+}
+.practice8 {
+    width: 175px;
+    height: 175px;
+    position: absolute;
+    left: 38%;
+    top: 330px;
+    animation: myOrbit 4s linear infinite;
+    animation-delay: 3.5s;
+}
+.practice9 {
+    width: 175px;
+    height: 175px;
+    position: absolute;
+    left: 38%;
+    top: 330px;
+    animation: myOrbit 4s linear infinite;
+    animation-delay: 4s;
+}  */
