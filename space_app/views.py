@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.shortcuts import render, HttpResponse
 from .models import Planet, Item
-import requests
+
 
 
 def index(request):
