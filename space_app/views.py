@@ -3,7 +3,6 @@ from django.shortcuts import render, HttpResponse
 from .models import Planet, Item
 
 
-
 def index(request):
     request.session.clear()
     context = {
@@ -32,7 +31,7 @@ def measure(request, item_id, planet_id):
     request.session['amount'] = '{:,}'.format(int(total))
     request.session['the_item'] = item.item_name
     request.session['item_length'] = '{:,}'.format(item_l)
-    request.session['sentence'] = ('It will take approximately %s %s to reach %s  from the Earth.' % (request.session['amount'], request.session['the_item'], planet.name) )
+    request.session['sentence'] = ('Oh the %s! It will take %s of those to get to %s from the Earth!' % (request.session['the_item'], request.session['amount'], planet.name) )
     return redirect(f'/planet/{planet.id}')
 
 def create(request):
